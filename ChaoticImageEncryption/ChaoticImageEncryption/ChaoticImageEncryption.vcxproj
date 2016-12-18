@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E60CD234-4C0E-48E9-882D-1B192E5DB56D}</ProjectGuid>
+    <RootNamespace>ChaoticImageEncryption</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ChaoticImageEncryption.h" />
+    <ClInclude Include="ChaoticImageEncryptionDoc.h" />
+    <ClInclude Include="ChaoticImageEncryptionView.h" />
+    <ClInclude Include="ChaoticSystem\Chaotic.h" />
+    <ClInclude Include="ChaoticSystem\Henon.h" />
+    <ClInclude Include="ChaoticSystem\Kent.h" />
+    <ClInclude Include="ChaoticSystem\Logistic.h" />
+    <ClInclude Include="ChaoticSystem\Logistic2D.h" />
+    <ClInclude Include="ChaoticSystem\LogisticSine.h" />
+    <ClInclude Include="ChaoticSystem\LogisticTent.h" />
+    <ClInclude Include="ChaoticSystem\OCML.h" />
+    <ClInclude Include="ChaoticSystem\Peter.h" />
+    <ClInclude Include="ChaoticSystem\PWLCM.h" />
+    <ClInclude Include="ChaoticSystem\ReShapeKent.h" />
+    <ClInclude Include="ChaoticSystem\Sine.h" />
+    <ClInclude Include="ChaoticSystem\SLMM.h" />
+    <ClInclude Include="ChaoticSystem\SuperChen.h" />
+    <ClInclude Include="ChaoticSystem\TentSine.h" />
+    <ClInclude Include="DlgDisplay.h" />
+    <ClInclude Include="EncryptAlgorithm\EncryptAlgorithm.h" />
+    <ClInclude Include="EncryptAlgorithm\LqGraduate.h" />
+    <ClInclude Include="EncryptAlgorithm\testAlgorithm.h" />
+    <ClInclude Include="EncryptAlgorithm\WangXuAlgorithm.h" />
+    <ClInclude Include="EncryptAlgorithm\YangLiuAlgorithm.h" />
+    <ClInclude Include="ImageTitle.h" />
+    <ClInclude Include="Image\Image.h" />
+    <ClInclude Include="LabelImage.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="math\math.h" />
+    <ClInclude Include="PerformanceAnalysis\RandomPerformance.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ChaoticImageEncryption.cpp" />
+    <ClCompile Include="ChaoticImageEncryptionDoc.cpp" />
+    <ClCompile Include="ChaoticImageEncryptionView.cpp" />
+    <ClCompile Include="ChaoticSystem\Chaotic.cpp" />
+    <ClCompile Include="ChaoticSystem\Henon.cpp" />
+    <ClCompile Include="ChaoticSystem\Kent.cpp" />
+    <ClCompile Include="ChaoticSystem\Logistic.cpp" />
+    <ClCompile Include="ChaoticSystem\Logistic2D.cpp" />
+    <ClCompile Include="ChaoticSystem\LogisticSine.cpp" />
+    <ClCompile Include="ChaoticSystem\LogisticTent.cpp" />
+    <ClCompile Include="ChaoticSystem\OCML.cpp" />
+    <ClCompile Include="ChaoticSystem\Peter.cpp" />
+    <ClCompile Include="ChaoticSystem\PWLCM.cpp" />
+    <ClCompile Include="ChaoticSystem\ReShapeKent.cpp" />
+    <ClCompile Include="ChaoticSystem\Sine.cpp" />
+    <ClCompile Include="ChaoticSystem\SLMM.cpp" />
+    <ClCompile Include="ChaoticSystem\SuperChen.cpp" />
+    <ClCompile Include="ChaoticSystem\TentSine.cpp" />
+    <ClCompile Include="DlgDisplay.cpp" />
+    <ClCompile Include="EncryptAlgorithm\EncryptAlgorithm.cpp" />
+    <ClCompile Include="EncryptAlgorithm\LqGraduate.cpp" />
+    <ClCompile Include="EncryptAlgorithm\testAlgorithm.cpp" />
+    <ClCompile Include="EncryptAlgorithm\WangXuAlgorithm.cpp" />
+    <ClCompile Include="EncryptAlgorithm\YangLiuAlgorithm.cpp" />
+    <ClCompile Include="Image\Image.cpp" />
+    <ClCompile Include="LabelImage.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="math\math.cpp" />
+    <ClCompile Include="PerformanceAnalysis\RandomPerformance.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ChaoticImageEncryption.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\buttons.bmp" />
+    <Image Include="res\ChaoticImageEncryption.ico" />
+    <Image Include="res\ChaoticImageEncryptionDoc.ico" />
+    <Image Include="res\ChaoticSystemTwo.bmp" />
+    <Image Include="res\ChaoticSystem_Large.bmp" />
+    <Image Include="res\ChaoticSystem_Small.bmp" />
+    <Image Include="res\filelarge.bmp" />
+    <Image Include="res\filesmall.bmp" />
+    <Image Include="res\main.bmp" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\Toolbar256.bmp" />
+    <Image Include="res\writelarge.bmp" />
+    <Image Include="res\writesmall.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\ChaoticImageEncryption.rc2" />
+    <None Include="res\ribbon.mfcribbon-ms" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="ChaoticImageEncryption.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
